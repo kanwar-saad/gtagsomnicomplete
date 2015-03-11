@@ -73,13 +73,12 @@ def do_complete(base):
    match_list = s[0].split('\n')
    if (len(match_list) == 0):
       return completions
-   num = 0;
+   
    completions = []
    for item in match_list:
       if item is None or not item:
          continue;
-         completions.append(completion(item))
-      num = num + 1
+      completions.append(completion(item))
    return completions
 
 
