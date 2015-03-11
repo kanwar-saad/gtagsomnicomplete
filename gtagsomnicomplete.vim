@@ -1,7 +1,7 @@
 function! gtagsomnicomplete#Complete(findstart, base)
 python << PYTHONEOF
 
-debug_level = 2
+debug_level = 0
 
 import vim
 
@@ -73,7 +73,7 @@ def do_complete(base):
    match_list = s[0].split('\n')
    if (len(match_list) == 0):
       return completions
-   
+
    completions = []
    for item in match_list:
       if item is None or not item:
